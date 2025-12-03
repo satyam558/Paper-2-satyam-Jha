@@ -1,7 +1,7 @@
-import mongoose from "mongoose"
+import mongoose from "mongoose";
 
 const dbConfig = ()=>{
-    mongoose.connect('mongodb+srv://jhas24020:FbSq7xVpAzPdAO0D@satyam.ob1iwyi.mongodb.net/library')
+    mongoose.connect(process.env.MONGO_URL)
     .then(()=>console.log('db conncected successfully👍'))
     .catch((err)=>console.log(err))
 }

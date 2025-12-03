@@ -2,9 +2,12 @@ import express from 'express';
 import dbConfig from './model/library.js';
 import bookRoutes from './routes/libraryRoutes.js';
 import cors from 'cors';
+import dotenv from "dotenv";
 
-const PORT = 5000;
+const PORT = process.env.PORT || 4000;
 const app = express();
+
+dotenv.config();
 
 dbConfig();
 
